@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "image_url": "https://imgs.search.brave.com/QtIB66WJoMGorbo1slm9j6rw-QcFAGascL-5BmYPL70/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEz/Njg2NDY4My9waG90/by9zcGFnaGV0dGkt/Y2FyYm9uYXJhLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1J/X3hLSnBCdTF5a054/czJiaVpTaW5Oc2Yt/TWc1MV9fYlNyZ253/aDdjdzZNPQ",
+        "time_to_make": "25 minutes",
+        "steps": [
+            {
+                "step": "Step 1: Boil water in a large pot, add a pinch of salt and cook the spaghetti according to package instructions.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 2: In a separate pan, cook diced pancetta or bacon until crispy.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 3: In a bowl, whisk together eggs and grated Parmesan cheese.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 4: Drain the pasta and add to the pan with pancetta. Remove from heat.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 5: Quickly stir in the egg and cheese mixture to create a creamy sauce. Season with pepper.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 6: Serve immediately with extra Parmesan on top.",
+                "temp": -1,
+                "time": -1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Margherita Pizza",
+        "image_url": "https://imgs.search.brave.com/F_-TxtLOfCmLULPQeZ_SRu9X16CBxhTY7jDLCkT7p4M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9wcmVzZW50YXRp/b24tZGVsaWNpb3Vz/LW1hcmdoZXJpdGEt/cGl6emEtcGhvdG9f/MTIwMjkxNC0zOTky/MS5qcGc_c2l6ZT02/MjYmZXh0PWpwZw",
+        "time_to_make": "1 hour 30 minutes",
+        "steps": [
+            {
+                "step": "Step 1: Preheat the oven to 250°C (480°F) and prepare a pizza stone or baking sheet.",
+                "temp": 250,
+                "time": -1
+            },
+            {
+                "step": "Step 2: Roll out the pizza dough into a round shape.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 3: Spread a thin layer of tomato sauce over the dough.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 4: Add slices of fresh mozzarella and scatter basil leaves on top.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 5: Drizzle with olive oil and season with salt.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 6: Bake for 10-12 minutes or until the crust is golden and the cheese is bubbling.",
+                "temp": -1,
+                "time": 12
+            },
+            {
+                "step": "Step 7: Remove from oven and let cool for a few minutes before slicing.",
+                "temp": -1,
+                "time": -1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Chocolate Chip Cookies",
+        "image_url": "https://imgs.search.brave.com/A8pfliIQ_8Ur2hvoX7sgFJa3UCtiP9ADG657kAqRT20/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcx/NTg4MDU1L3Bob3Rv/L2Nob2NvbGF0ZS1j/aGlwcy5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9bXlOVzRN/UURPWV85aUM4QU1Q/bnVDd3VwdmtjeVhQ/S3RxQlltOHlWU3M1/cz0",
+        "time_to_make": "45 minutes",
+        "steps": [
+            {
+                "step": "Step 1: Preheat the oven to 180°C (350°F).",
+                "temp": 180,
+                "time": -1
+            },
+            {
+                "step": "Step 2: Cream together butter and sugar until light and fluffy.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 3: Add eggs and vanilla extract, then mix until well combined.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 4: In a separate bowl, whisk together flour, baking soda, and salt.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 5: Gradually add the dry ingredients to the wet mixture, then fold in chocolate chips.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 6: Drop spoonfuls of dough onto a baking sheet.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 7: Bake for 10-12 minutes or until golden brown. Let cookies cool before serving.",
+                "temp": -1,
+                "time": 12
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Tiramisu",
+        "image_url": "https://imgs.search.brave.com/KICPLuI-V2q6rfWH78mvRGDTfZBa1XWjH--1fJmBn3c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzk3LzE3LzA4/LzM2MF9GXzk3MTcw/ODAzXzBmZkZ3Qjlo/Q2JhNEVqNDVLbEpN/WEhiNXNld01oUW1Z/LmpwZw",
+        "time_to_make": "4 hours",
+        "steps": [
+            {
+                "step": "Step 1: Brew strong coffee and let it cool.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 2: Mix mascarpone cheese with sugar and vanilla extract until smooth.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 3: In a separate bowl, whip cream until stiff peaks form.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 4: Dip ladyfingers into the cooled coffee and arrange them in a layer in a dish.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 5: Spread half of the mascarpone mixture over the ladyfingers.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 6: Repeat with another layer of ladyfingers and mascarpone.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 7: Chill in the refrigerator for at least 3 hours before serving.",
+                "temp": -1,
+                "time": 180
+            },
+            {
+                "step": "Step 8: Dust with cocoa powder before serving.",
+                "temp": -1,
+                "time": -1
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Chicken Alfredo Pasta",
+        "image_url": "https://imgs.search.brave.com/ub_yuzhm0_GFI_8zaiM2_vB5qJD89Y4E7jY6UwN-i2A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90aGVj/b3p5Y29vay5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjIv/MDgvQ2hpY2tlbi1B/bGZyZWRvLVBhc3Rh/LTIuanBn",
+        "time_to_make": "30 minutes",
+        "steps": [
+            {
+                "step": "Step 1: Cook pasta in a large pot of salted water until al dente.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 2: In a pan, cook chicken breast seasoned with salt and pepper until golden and cooked through.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 3: In a saucepan, melt butter and add minced garlic. Stir in heavy cream and bring to a simmer.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 4: Add grated Parmesan cheese and whisk until smooth.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 5: Toss the cooked pasta with the sauce and top with cooked chicken.",
+                "temp": -1,
+                "time": -1
+            },
+            {
+                "step": "Step 6: Serve with chopped parsley and extra Parmesan.",
+                "temp": -1,
+                "time": -1
+            }
+        ]
+    }
+]
