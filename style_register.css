@@ -1,0 +1,33 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width:40vw ;
+}
+input{
+    margin: 15px;
+}
+a{
+    margin: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+form{
+    border: 2px solid black;
+    border-radius: 15px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+button{
+    background-color: blue;
+    color: white;
+    border: none;
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
