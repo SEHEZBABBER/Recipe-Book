@@ -10,7 +10,7 @@ fetch('data.json')
     console.log(data); // JSON data loaded
     let main = document.getElementsByTagName('main')[0]; // Access the first (and likely only) <main> element
 
-    data.forEach(recipe => {
+    data.forEach((recipe, index) => {
       // Create a new div for the recipe
       let recipediv = document.createElement('div');
       recipediv.classList.add('recipe');
@@ -24,6 +24,13 @@ fetch('data.json')
 
       // Append the recipe div to the main element
       main.appendChild(recipediv);
+
+      // Add event listener to the recipe div
+      recipediv.addEventListener('click', function() {
+        console.log("Recipe clicked");
+        localStorage.setItem("index", index + 1);
+        window.location.href = 'recipe.html';
+      });
     });
   })
   .catch(error => {
