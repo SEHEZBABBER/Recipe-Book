@@ -75,3 +75,29 @@ hr {
     border: none; 
     margin: 20px auto; 
 }
+.add h2, .add p {
+    position: absolute; /* Position the text over the image */
+    color: white;
+    z-index: 2;
+    width: 100%; /* Make the text span the full width */
+    text-align: center;
+    padding: 0 10px;
+    left: 0;
+}
+.add h2 {
+    top: 10px; /* Adjust position of the title */
+}
+
+.add p {
+    bottom: 10px; /* Adjust position of the description */
+}
+.add {
+    height: 30vw;
+    width: 22vw;
+    position: relative; /* Added to contain the absolute-positioned text */
+    overflow: hidden;
+}
+.add img {
+    height: 100%;
+    width: 100%;
+}

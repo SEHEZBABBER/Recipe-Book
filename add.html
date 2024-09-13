@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style_add.css">
+    <title>Customise Your Recipe Here</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" id="name" placeholder="Enter the Name of The Recipe Here">
+        <div id="steps_div">
+        <div class="step_devison">
+            <input type="text" name="steps" id="steps" placeholder="Enter the directions to follow" class="step">
+            <input type="text" name="temprature" id="temprature" placeholder="C" class="temp">
+            <div>
+            <i class="fa fa-clock-o"></i>
+            <input type="text" name="time" id="time" placeholder="min" class="time">
+            </div>
+            <button class="add" type="button">add</button>
+        </div>
+    </div>
+    <button type="submit" id="submit_btn">Submit</button>
+    </form>
+    <script src="script_add.js"></script>
+</body>
+</html>
