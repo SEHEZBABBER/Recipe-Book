@@ -1,25 +1,45 @@
-// Fetch the JSON file
-fetch('data.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok ' + response.statusText);
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data); // JSON data loaded
-    let main = document.getElementsByTagName('main')[0]; // Access the first (and likely only) <main> element
+document.addEventListener('DOMContentLoaded', () => {
+  // Fetch the JSON file
+  fetch('data.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data); // JSON data loaded
+      let main = document.getElementsByTagName('main')[0]; // Access the first (and likely only) <main> element
 
-    data.forEach((recipe, index) => {
-      // Create a new div for the recipe
+      data.forEach((recipe, index) => {
+        // Create a new div for the recipe
+        let recipediv = document.createElement('div');
+        recipediv.classList.add('recipe');
+
+        // Set the inner HTML for the recipe
+        recipediv.innerHTML = `
+          <h2>${recipe.name}</h2>
+          <img src="${recipe.image_url}" alt="${recipe.name}">
+          <p>Time to make: ${recipe.time_to_make}</p>
+        `;
+
+        // Append the recipe div to the main element
+        main.appendChild(recipediv);
+
+        // Add event listener to the recipe div
+        recipediv.addEventListener('click', function() {
+          console.log("Recipe clicked");
+          localStorage.setItem("index", index + 1);
+          window.location.href = 'recipe.html';
+        });
+      });
+
       let recipediv = document.createElement('div');
-      recipediv.classList.add('recipe');
+      recipediv.classList.add('add');
 
       // Set the inner HTML for the recipe
       recipediv.innerHTML = `
-        <h2>${recipe.name}</h2>
-        <img src="${recipe.image_url}" alt="${recipe.name}">
-        <p>Time to make: ${recipe.time_to_make}</p>
+        <img src="https://imgs.search.brave.com/DLIP5yc8F1fR4TLucE_p9kZb3S9dbvzd6fN8F2PBcag/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTY4/NDAzMzEyL3Bob3Rv/L3BsdXMtc3ltYm9s/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1kVUdJOGNwcGlX/WE1Xdm90VjBHd3BJ/aTlzQ3FsYlZrMzNp/cGExTTJiSkRzPQ" alt="add">
       `;
 
       // Append the recipe div to the main element
@@ -27,29 +47,21 @@ fetch('data.json')
 
       // Add event listener to the recipe div
       recipediv.addEventListener('click', function() {
-        console.log("Recipe clicked");
-        localStorage.setItem("index", index + 1);
-        window.location.href = 'recipe.html';
+        console.log("Add new recipe clicked");
+        window.location.href = 'add.html';
       });
-    });
-    let recipediv = document.createElement('div');
-    recipediv.classList.add('add');
-
-    // Set the inner HTML for the recipe
-    recipediv.innerHTML = `
-      <h2>Create Your Own Customised Recipe</h2>
-      <img src = "https://imgs.search.brave.com/9lZbDneHCDEhp5adErvUdvh7Bk3i4zM-IVjT8fEi1Ug/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni83OTA0Lzc5MDQy/MDcucG5nP3NlbXQ9/YWlzX2h5YnJpZA" alt="add">
-    `;
-
-    // Append the recipe div to the main element
-    main.appendChild(recipediv);
-
-    // Add event listener to the recipe div
-    recipediv.addEventListener('click', function() {
-      console.log("Recipe clicked");
-      window.location.href = 'add.html';
     })
-  })
-  .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
+    .catch(error => {
+      console.error('There has been a problem with your fetch operation:', error);
+    });
+
+  // Adding event listener for the #rec element
+  let rec = document.getElementById('rec');
+  let my = document.getElementById('my');
+  rec.addEventListener('click', function(){
+    window.location = 'index.html';
   });
+  my.addEventListener('click',function(){
+    window.location = 'my_creation.html';
+  })
+});

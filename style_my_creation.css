@@ -127,3 +127,9 @@ hr {
 .line{
     color: rgb(79, 186, 222);
 }
+.new_creation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -30,6 +30,9 @@ form[0].addEventListener('submit',function(event){
         alert('name cant be empty');
     }
     let arr = [];let tem = [];let tm = [];
+    let namee = JSON.parse(localStorage.getItem('name'));
+    namee.push(name);
+    localStorage.setItem('name',JSON.stringify(namee));
     for(let i = 0;i<step.length;i++){
         arr.push(step[i].value);
         tem.push(temp[i].value);
@@ -42,4 +45,5 @@ form[0].addEventListener('submit',function(event){
         "time":tm
     };
     localStorage.setItem(obj.name,JSON.stringify(obj));
+    window.location.href = 'my_creation.html';
 })
