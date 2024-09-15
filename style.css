@@ -146,3 +146,6 @@ hr {
 .line{
     color: rgb(79, 186, 222);
 }
+.progress{
+    transform: translate(5px,0);
+}

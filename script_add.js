@@ -66,9 +66,12 @@ form[0].addEventListener('submit', function(event) {
         "time": tm
     };
 
-    // Save the recipe in localStorage using the recipe name as key
-    localStorage.setItem(obj.name, JSON.stringify(obj));
-    
+    // Get current recipe index
+    let recipeIndex = namee.length - 1; // Use the length of 'name' array as the index
+
+    // Save the recipe in localStorage using the index as the key
+    localStorage.setItem(`recipe_${recipeIndex}`, JSON.stringify(obj));
+
     // Redirect to 'my_creation.html' after submission
     window.location.href = 'my_creation.html';
 });

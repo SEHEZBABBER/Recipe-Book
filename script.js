@@ -18,12 +18,16 @@ fetch('data.json')
       // Function to create a recipe div
       function createRecipeDiv(recipe, index) {
         let recipediv = document.createElement('div');
+        let progress = JSON.parse(localStorage.getItem('progress'));
+        if(progress == null){
+          progress = [0,0,0,0,0];
+        }
         recipediv.classList.add('recipe');
 
         recipediv.innerHTML = `
           <h2>${recipe.name}</h2>
           <img src="${recipe.image_url}" alt="${recipe.name}">
-          <p>Time to make: ${recipe.time_to_make}</p>
+          <p> Progress : ${progress[index]}</p>
         `;
 
         main.appendChild(recipediv);

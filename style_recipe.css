@@ -89,3 +89,9 @@ footer{
     transform:translate(2px,2px);
     box-shadow: none;
 }
+.timer {
+    font-size: 1.2em;
+    color: red;
+    margin-top: 10px;
+  }
+  
