@@ -6,24 +6,8 @@ fetch('data.json')
       return response.json();
     })
     .then(data => {
-      function add_tolocal(arr){
-        if(arr.length >= 5)arr.shift();
-        localStorage.setItem('search_history',JSON.stringify(arr));
-      }
       let main = document.getElementsByTagName('main')[0]; // Access the first (and likely only) <main> element
       let search = document.getElementById('Search');
-      let search_btn = document.getElementById('search_btn');
-      search_btn.addEventListener('click', function() {
-        let str = search.value.trim(); // Get the search input value and trim whitespace
-        if (str === "") return; // Prevent adding empty strings to search history
-    
-        // Retrieve the search history from localStorage
-        let arr = JSON.parse(localStorage.getItem('search_history')) || []; // Parse the stored data or initialize an empty array
-    
-        // Add the search term to the array and update localStorage
-        arr.push(str);
-        add_tolocal(arr); // Call the function to handle localStorage update
-      });
       // Function to clear all child nodes of the main element
       function clear_main() {
         while (main.firstChild) {
