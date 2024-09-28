@@ -1,4 +1,5 @@
-.div{
+/* General Styling */
+.div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,106 +10,78 @@
     border-radius: 10px;
     margin-bottom: 15px;
 }
-header{
-    width:100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-h1{
-    color: red;
-    margin: 0 auto;
-}
-main{
+
+header {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
-#done{
-    margin-right: 35px;
+
+h1 {
+    color: red;
 }
-#step{
-    margin-left: 35px;
-}
-.heading{
-    margin-bottom: 50px;
-}
-footer{
+
+main {
+    width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-/* Style for progress bar container */
-.progress-container {
-    width: 80vw;
-    position: relative; /* To position the percentage text */
-    background-color: #f3f3f3;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    height: 20px;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
-/* Style for the progress bar */
-.progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: #4caf50;
-    border-radius: 5px;
-    transition: width 0.3s;
+#btn_back {
+    margin-bottom: 20px;
 }
 
-/* Style for the progress text */
-#progress-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center text */
-    color: black;
-    font-weight: bold;
-    z-index: 1; /* Ensure text is above the progress bar */
-}
-#btn_back{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
-#goback{
-    margin-top: 30px;
+#goback {
     background-color: #4caf50;
     color: white;
     border: none;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
-}
-#goback:active{
-    transform:translate(2px,2px);
-    box-shadow: none;
-}
-.timer {
-    font-size: 1.2em;
-    color: red;
-    margin-top: 10px;
-  }
-  
-  #edit-button, #submit-button {
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
-#edit-button {
+#edit-save-button {
+    margin-top: 20px;
     background-color: #4caf50;
     color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-#submit-button {
-    background-color: #f44336;
-    color: white;
+/* Progress bar styling */
+.progress-container {
+    width: 80vw;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    width: 0;
+    transition: width 0.3s;
+}
+
+#progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
 }

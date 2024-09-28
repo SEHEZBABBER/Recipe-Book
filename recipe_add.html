@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recipe Details</title>
     <link rel="stylesheet" href="style_recipe_add.css">
 </head>
 <body>
     <header>
+        <!-- Header with Recipe Name -->
     </header>
     <main>
+        <!-- Recipe steps will go here -->
     </main>
-    <header></header>
-    <main></main>
     <footer>
         <div id="btn_back">
             <button id="goback">Go Back</button>
         </div>
         <div id="edit-container">
-            <!-- Edit and Submit buttons -->
-            <button id="edit-button">Edit</button>
-            <button id="submit-button" style="display: none;">Save</button>
+            <!-- Single Edit/Save button -->
+            <button id="edit-save-button">Edit</button>
+        </div>
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <span id="progress-text">0%</span>
         </div>
     </footer>
     <script src="script_recipe_add.js"></script>
