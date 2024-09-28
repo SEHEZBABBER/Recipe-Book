@@ -40,10 +40,8 @@ fetch('data.json')
                 <p> Progress : ${progress[index]}</p>
             `;
 
-            // Append the recipe div to the main content area
             main.appendChild(recipeDiv);
 
-            // Add click event listener to navigate to the recipe page
             recipeDiv.addEventListener('click', function () {
                 console.log("Recipe clicked: " + recipe.name);
                 localStorage.setItem("index", index + 1); // Store the index in localStorage
@@ -80,7 +78,6 @@ fetch('data.json')
             });
 
             // Always display the "Add New Recipe" button
-            addNewRecipeButton();
         }
 
         // Initialize the progress array based on the number of recipes
@@ -103,17 +100,15 @@ fetch('data.json')
     });
 
 // Handle tab navigation for Recipes and My Creations pages
-let rec = document.getElementById('rec'); // Recipes button
-let my = document.getElementById('my'); // My Creations button
+let rec = document.getElementById('recipes-btn'); // Recipes button
+let my = document.getElementById('my-creation-btn'); // My Creations button
 
-if (rec) {
     rec.addEventListener('click', function () {
-        window.location = 'index.html'; // Navigate to Recipes page
+        console.log('a');
+        window.location.href = 'index.html'; // Navigate to Recipes page
     });
-}
 
-if (my) {
     my.addEventListener('click', function () {
-        window.location = 'my_creation.html'; // Navigate to My Creations page
+        console.log('a');
+        window.location.href = 'my_creation.html'; // Navigate to My Creations page
     });
-}

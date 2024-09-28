@@ -113,11 +113,15 @@ search.addEventListener('input', function() {
 // Call displayRecipes on initial load
 displayRecipes();
 
-let rec = document.getElementById('rec');
-let my = document.getElementById('my');
-rec.addEventListener('click', function() {
-    window.location.href = 'index.html';
-});
-my.addEventListener('click', function() {
-    window.location.href = 'my_creation.html';
-});
+let rec = document.getElementById('recipes-btn'); // Recipes button
+let my = document.getElementById('my-creation-btn'); // My Creations button
+
+    rec.addEventListener('click', function () {
+        console.log('a');
+        window.location.href = 'index.html'; // Navigate to Recipes page
+    });
+
+    my.addEventListener('click', function () {
+        console.log('a');
+        window.location.href = 'my_creation.html'; // Navigate to My Creations page
+    });
