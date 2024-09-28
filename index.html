@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,30 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
-        <div id="se">
-            <input type="text" name="Search" id="Search" placeholder="Search For Your Recipe Here">
-            <button type="button" id="search_btn"><i class="fa fa-search"></i></button>
+        <h1>Recipe Book</h1>
+        <div id="search-container">
+            <input type="text" name="Search" id="search" placeholder="Search for a recipe">
+            <button type="button" id="search-btn"><i class="fa fa-search"></i></button>
         </div>
     </header>
-    <br>
-    <hr>
-    <br>
-    <div id="btn_block">
-        <div id="recipies">
-            <button id="rec" class="line">Recieps</button>
-        </div>
-        <div id="my_creation">
-            <button id="my">My Creation</button>
-        </div>
+
+    <div id="button-container">
+        <button id="recipes-btn" class="tab-btn active">Recipes</button>
+        <button id="my-creation-btn" class="tab-btn">My Creations</button>
     </div>
-    <br>
-    <br>
+
     <main>
+        <!-- Dynamic content (recipe cards) will go here -->
     </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Book. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>

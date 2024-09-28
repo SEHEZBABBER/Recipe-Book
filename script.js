@@ -1,101 +1,119 @@
+// Fetch recipe data from data.json
 fetch('data.json')
     .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-      return response.json();
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
     })
     .then(data => {
-      let main = document.getElementsByTagName('main')[0]; // Access the first (and likely only) <main> element
-      let search = document.getElementById('Search');
-      // Function to clear all child nodes of the main element
-      function clear_main() {
-        while (main.firstChild) {
-          main.removeChild(main.firstChild);
+        const main = document.getElementsByTagName('main')[0]; // Access the <main> element
+        const search = document.getElementById('search'); // Search input field
+
+        // Function to clear the main content area
+        function clearMain() {
+            while (main.firstChild) {
+                main.removeChild(main.firstChild);
+            }
         }
-      }
 
-      // Function to create a recipe div
-      function createRecipeDiv(recipe, index) {
-        let recipediv = document.createElement('div');
-        let progress = JSON.parse(localStorage.getItem('progress'));
-        if(progress == null){
-          progress = [0,0,0,0,0];
+        // Function to initialize progress array in localStorage if not already present
+        function initializeProgress(dataLength) {
+            let progress = JSON.parse(localStorage.getItem('progress')) || [];
+            // Ensure the progress array has enough elements for all recipes
+            for (let i = progress.length; i < dataLength; i++) {
+                progress.push(0); // Default value for new items
+            }
+            localStorage.setItem('progress', JSON.stringify(progress)); // Save back to localStorage
+            return progress;
         }
-        recipediv.classList.add('recipe');
 
-        recipediv.innerHTML = `
-          <h2>${recipe.name}</h2>
-          <img src="${recipe.image_url}" alt="${recipe.name}">
-          <p> Progress : ${progress[index]}</p>
-        `;
+        // Function to create a recipe div and append it to the main element
+        function createRecipeDiv(recipe, index) {
+            let recipeDiv = document.createElement('div');
+            let progress = JSON.parse(localStorage.getItem('progress')); // Retrieve updated progress array
 
-        main.appendChild(recipediv);
+            recipeDiv.classList.add('recipe');
+            recipeDiv.innerHTML = `
+                <h2>${recipe.name}</h2>
+                <img src="${recipe.image_url}" alt="${recipe.name}">
+                <p> Progress : ${progress[index]}</p>
+            `;
 
-        recipediv.addEventListener('click', function() {
-          console.log("Recipe clicked");
-          localStorage.setItem("index", index + 1);
-          window.location.href = 'recipe.html';
-        });
-      }
+            // Append the recipe div to the main content area
+            main.appendChild(recipeDiv);
 
-      // Function to add "Add New Recipe" button
-      function addNewRecipeButton() {
-        let recipediv = document.createElement('div');
-        recipediv.classList.add('add');
+            // Add click event listener to navigate to the recipe page
+            recipeDiv.addEventListener('click', function () {
+                console.log("Recipe clicked: " + recipe.name);
+                localStorage.setItem("index", index + 1); // Store the index in localStorage
+                window.location.href = 'recipe.html'; // Navigate to recipe.html
+            });
+        }
 
-        recipediv.innerHTML = `
-          <img src="https://imgs.search.brave.com/DLIP5yc8F1fR4TLucE_p9kZb3S9dbvzd6fN8F2PBcag/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTY4/NDAzMzEyL3Bob3Rv/L3BsdXMtc3ltYm9s/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1kVUdJOGNwcGlX/WE1Xdm90VjBHd3BJ/aTlzQ3FsYlZrMzNp/cGExTTJiSkRzPQ" alt="add">
-        `;
+        // Function to add the "Add New Recipe" button at the end of the list
+        function addNewRecipeButton() {
+            let addRecipeDiv = document.createElement('div');
+            addRecipeDiv.classList.add('add');
+            addRecipeDiv.innerHTML = `
+                <img src="https://imgs.search.brave.com/DLIP5yc8F1fR4TLucE_p9kZb3S9dbvzd6fN8F2PBcag/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTY4/NDAzMzEyL3Bob3Rv/L3BsdXMtc3ltYm9s/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1kVUdJOGNwcGlX/WE1Xdm90VjBHd3BJ/aTlzQ3FsYlZrMzNp/cGExTTJiSkRzPQ" alt="Add New Recipe">
+            `;
 
-        main.appendChild(recipediv);
+            main.appendChild(addRecipeDiv);
 
-        recipediv.addEventListener('click', function() {
-          console.log("Add new recipe clicked");
-          window.location.href = 'add.html';
-        });
-      }
+            // Add click event listener to navigate to the add recipe page
+            addRecipeDiv.addEventListener('click', function () {
+                console.log("Add new recipe clicked");
+                window.location.href = 'add.html'; // Navigate to add.html
+            });
+        }
 
-      // Display recipes when search input is updated
-      search.addEventListener('input', function () {
-        clear_main(); // Clear previous results
+        // Function to filter and display recipes based on search input
+        function displayFilteredRecipes() {
+            clearMain(); // Clear the existing recipes before showing new results
 
-        // Filter and display recipes that match the search value
+            // Filter recipes that match the search input and display them
+            data.forEach((recipe, index) => {
+                if (recipe.name.toLowerCase().includes(search.value.toLowerCase())) {
+                    createRecipeDiv(recipe, index); // Create recipe cards for matching recipes
+                }
+            });
+
+            // Always display the "Add New Recipe" button
+            addNewRecipeButton();
+        }
+
+        // Initialize the progress array based on the number of recipes
+        const progressArray = initializeProgress(data.length);
+
+        // Event listener for real-time search functionality
+        search.addEventListener('input', displayFilteredRecipes);
+
+        // Initial rendering of all recipes on page load
         data.forEach((recipe, index) => {
-          if (recipe.name.toLowerCase().includes(search.value.toLowerCase())) {
-            createRecipeDiv(recipe, index);
-          }
+            createRecipeDiv(recipe, index); // Create and append all recipe cards
         });
 
-        // Always display the "Add New Recipe" button
+        // Add the "Add New Recipe" button at the end of the recipe list
         addNewRecipeButton();
-      });
-
-      // Initial rendering of all recipes and the "Add New Recipe" button
-      data.forEach((recipe, index) => {
-        createRecipeDiv(recipe, index);
-      });
-
-      addNewRecipeButton(); // Add the "Add New Recipe" button
 
     })
     .catch(error => {
-      console.error('There has been a problem with your fetch operation:', error);
+        console.error('There has been a problem with your fetch operation:', error);
     });
 
-// Adding event listener for the #rec and #my elements
-let rec = document.getElementById('rec');
-let my = document.getElementById('my');
+// Handle tab navigation for Recipes and My Creations pages
+let rec = document.getElementById('rec'); // Recipes button
+let my = document.getElementById('my'); // My Creations button
 
-// Add null checks in case these elements are not present in the DOM
 if (rec) {
-  rec.addEventListener('click', function () {
-    window.location = 'index.html';
-  });
+    rec.addEventListener('click', function () {
+        window.location = 'index.html'; // Navigate to Recipes page
+    });
 }
 
 if (my) {
-  my.addEventListener('click', function () {
-    window.location = 'my_creation.html';
-  });
+    my.addEventListener('click', function () {
+        window.location = 'my_creation.html'; // Navigate to My Creations page
+    });
 }

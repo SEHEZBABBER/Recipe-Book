@@ -208,5 +208,155 @@
                 "time": -1
             }
         ]
-    }
-]
+    },
+    {
+            "id": 6,
+            "name": "Beef Tacos",
+            "image_url": "https://imgs.search.brave.com/f-0rJ93q-JFCbwk8whEr2WprOzIUfbWDek10olanoUw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pd2Fz/aHlvdWRyeS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDIvR3JvdW5kLUJl/ZWYtVGFjb3MtUmVj/aXBlLTUuanBn",
+            "time_to_make": "20 minutes",
+            "steps": [
+                {
+                    "step": "Step 1: Brown ground beef in a skillet and drain any excess fat.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 2: Add taco seasoning and water, simmer until thickened.",
+                    "temp": -1,
+                    "time": 5
+                },
+                {
+                    "step": "Step 3: Warm taco shells in the oven or on a skillet.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 4: Fill taco shells with beef, lettuce, tomatoes, cheese, and sour cream.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 5: Serve with salsa and guacamole on the side.",
+                    "temp": -1,
+                    "time": -1
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Caesar Salad",
+            "image_url": "https://imgs.search.brave.com/RcTrnJplslo9955D-QopORkyc2OxdJFXBX3eKgKhI3Y/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvODU2/NDIxMzYvcGhvdG8v/c2FsYWQuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPUFFY0tn/NFQ0UDV4RHBYZy1m/d0RsNzBpb1JDdFhO/dDBLaWhDRmVmby1O/UE09",
+            "time_to_make": "15 minutes",
+            "steps": [
+                {
+                    "step": "Step 1: Whisk together garlic, anchovies, Dijon mustard, lemon juice, and Parmesan cheese for the dressing.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 2: Slowly whisk in olive oil to emulsify the dressing.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 3: Toss romaine lettuce with the dressing and top with croutons and more Parmesan.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 4: Optionally add grilled chicken for a more filling salad.",
+                    "temp": -1,
+                    "time": -1
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "French Toast",
+            "image_url": "https://imgs.search.brave.com/rFkF3VXFCmIm7NlgEH4__8ob1Ej7_sQ4fn-_L5FmK1U/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA2LzA3Lzc3LzA2/LzM2MF9GXzYwNzc3/MDYyOF83RVM2am9Q/N1gycUJtamh1a1NR/R1NtVFdSZ2RXckRL/TS5qcGc",
+            "time_to_make": "10 minutes",
+            "steps": [
+                {
+                    "step": "Step 1: In a shallow dish, whisk together eggs, milk, cinnamon, and vanilla extract.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 2: Dip bread slices in the egg mixture, coating both sides.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 3: Cook on a greased skillet over medium heat until golden brown on both sides.",
+                    "temp": -1,
+                    "time": 5
+                },
+                {
+                    "step": "Step 4: Serve with maple syrup, powdered sugar, and fresh fruit.",
+                    "temp": -1,
+                    "time": -1
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Grilled Cheese Sandwich",
+            "image_url": "https://imgs.search.brave.com/iuYVsGus8AnLT1HTfo9Z4eSGQnE6aCVsdkzZa0JypVU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTEz/NjE2MzAyNS9waG90/by9jaGVlc2Utc2Fu/ZHdpY2guanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPWo5UVhN/cWZJYWl5RnAtVDF1/YUl6Tmh3aGtnMkRK/YnZOcFJDS1g2YzVr/aTQ9",
+            "time_to_make": "10 minutes",
+            "steps": [
+                {
+                    "step": "Step 1: Butter one side of each bread slice.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 2: Place cheese slices between two bread slices, butter side out.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 3: Cook in a skillet over medium heat until the bread is golden and the cheese is melted.",
+                    "temp": -1,
+                    "time": 5
+                },
+                {
+                    "step": "Step 4: Serve with tomato soup for a classic combination.",
+                    "temp": -1,
+                    "time": -1
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Pancakes",
+            "image_url": "https://imgs.search.brave.com/qLePC3jKphR2auBjAHQN0wsS3F0YoOEzr5ZzQ3o4acc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzgyLzQ4LzA5/LzM2MF9GXzc4MjQ4/MDkyN19GV2VkV011/dHI5VmdUd3JRSWw0/bVlzREg1U3RRa2xU/aS5qcGc",
+            "time_to_make": "20 minutes",
+            "steps": [
+                {
+                    "step": "Step 1: Whisk together flour, sugar, baking powder, and salt in a large bowl.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 2: In another bowl, whisk together milk, eggs, and melted butter.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 3: Pour the wet ingredients into the dry ingredients and stir until combined.",
+                    "temp": -1,
+                    "time": -1
+                },
+                {
+                    "step": "Step 4: Pour batter onto a greased griddle and cook until bubbles form on the surface. Flip and cook the other side until golden.",
+                    "temp": -1,
+                    "time": 2
+                },
+                {
+                    "step": "Step 5: Serve with butter, syrup, and fresh fruit.",
+                    "temp": -1,
+                    "time": -1
+                }
+            ]
+        }
+    ]    
