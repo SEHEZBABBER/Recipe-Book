@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
+    const errorMessageElement = document.getElementById('errorMessage');
 
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -12,25 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const storedPassword = localStorage.getItem(username);
         
         if (!storedPassword) {
-            showMessage('User does not exist', 'error');
+            showErrorMessage('User does not exist');
         } else if (password === storedPassword) {
-            showMessage('Login Successful', 'success');
-            setTimeout(() => {
-                window.location.href = 'index.html';
-            }, 1500);
+            // Directly redirect to index.html without showing a success message
+            window.location.href = 'index.html';
         } else {
-            showMessage('Incorrect password', 'error');
+            showErrorMessage('Incorrect password');
         }
     });
+
+    function showErrorMessage(message) {
+        errorMessageElement.textContent = message;
+        errorMessageElement.style.display = 'block';
+        
+        // Optionally, hide the message after a few seconds
+        setTimeout(() => {
+            errorMessageElement.style.display = 'none';
+        }, 3000);
+    }
 });
-
-function showMessage(message, type) {
-    const messageElement = document.createElement('div');
-    messageElement.textContent = message;
-    messageElement.className = `message ${type}`;
-    document.body.appendChild(messageElement);
-
-    setTimeout(() => {
-        messageElement.remove();
-    }, 3000);
-}
