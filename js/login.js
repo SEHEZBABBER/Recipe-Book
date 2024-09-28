@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showErrorMessage('User does not exist');
         } else if (password === storedPassword) {
             // Directly redirect to index.html without showing a success message
-            window.location.href = 'index.html';
+            window.location.href = '../html/index.html';
         } else {
             showErrorMessage('Incorrect password');
         }

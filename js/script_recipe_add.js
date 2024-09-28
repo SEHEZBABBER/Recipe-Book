@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('goback').addEventListener('click', () => {
-        window.location.href = 'my_creation.html';
+        window.location.href = '../html/my_creation.html';
     });
 
     // Initialize progress on page load

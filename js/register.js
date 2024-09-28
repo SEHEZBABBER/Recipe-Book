@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             localStorage.setItem(username, password);
             // Redirect to login page after successful registration
-            window.location.href = 'login.html';
+            window.location.href = '../html/login.html';
         }
     });
 

@@ -1,4 +1,4 @@
-fetch('data.json')
+fetch('../json/data.json')
   .then(response => response.json()) // Parse the response as JSON
   .then(data => {
     console.log(data); // Debugging: Check the structure of the data
@@ -16,7 +16,7 @@ fetch('data.json')
           localStorage.setItem('progress', JSON.stringify(prog));
         }
       }
-      window.location.href = 'index.html';
+      window.location.href = '../html/index.html';
     });
 
     let main = document.getElementsByTagName('main')[0];

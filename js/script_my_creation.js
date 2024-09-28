@@ -15,7 +15,7 @@ function put_add_in_main() {
     main.appendChild(recipediv);
 
     recipediv.addEventListener('click', function() {
-        window.location.href = 'add.html';
+        window.location.href = '../html/add.html';
     });
 }
 
@@ -31,7 +31,7 @@ function createRecipeDiv(recipe, index) {
     // Clickable div to redirect to recipe_add.html
     div.addEventListener('click', function() {
         localStorage.setItem('selectedRecipeIndex', index); // Store index in localStorage
-        window.location.href = 'recipe_add.html'; // Redirect to recipe details page
+        window.location.href = '../html/recipe_add.html'; // Redirect to recipe details page
     });
 
     // Prevent propagation when delete button is clicked (so recipe doesn't open)
@@ -118,10 +118,10 @@ let my = document.getElementById('my-creation-btn'); // My Creations button
 
     rec.addEventListener('click', function () {
         console.log('a');
-        window.location.href = 'index.html'; // Navigate to Recipes page
+        window.location.href = '../html/index.html'; // Navigate to Recipes page
     });
 
     my.addEventListener('click', function () {
         console.log('a');
-        window.location.href = 'my_creation.html'; // Navigate to My Creations page
+        window.location.href = '../html/my_creation.html'; // Navigate to My Creations page
     });

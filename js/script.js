@@ -1,5 +1,5 @@
 // Fetch recipe data from data.json
-fetch('data.json')
+fetch('../json/data.json')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
@@ -45,7 +45,7 @@ fetch('data.json')
             recipeDiv.addEventListener('click', function () {
                 console.log("Recipe clicked: " + recipe.name);
                 localStorage.setItem("index", index + 1); // Store the index in localStorage
-                window.location.href = 'recipe.html'; // Navigate to recipe.html
+                window.location.href = '../html/recipe.html'; // Navigate to recipe.html
             });
         }
 
@@ -62,7 +62,7 @@ fetch('data.json')
             // Add click event listener to navigate to the add recipe page
             addRecipeDiv.addEventListener('click', function () {
                 console.log("Add new recipe clicked");
-                window.location.href = 'add.html'; // Navigate to add.html
+                window.location.href = '../html/add.html'; // Navigate to add.html
             });
         }
 
@@ -105,10 +105,10 @@ let my = document.getElementById('my-creation-btn'); // My Creations button
 
     rec.addEventListener('click', function () {
         console.log('a');
-        window.location.href = 'index.html'; // Navigate to Recipes page
+        window.location.href = '../html/index.html'; // Navigate to Recipes page
     });
 
     my.addEventListener('click', function () {
         console.log('a');
-        window.location.href = 'my_creation.html'; // Navigate to My Creations page
+        window.location.href = '../html/my_creation.html'; // Navigate to My Creations page
     });

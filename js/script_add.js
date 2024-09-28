@@ -78,6 +78,6 @@ if (form.length > 0) {
         localStorage.setItem(`recipe_${recipeIndex}`, JSON.stringify(obj));
 
         // Redirect to 'my_creation.html' after submission
-        window.location.href = 'my_creation.html';
+        window.location.href = '../html/my_creation.html';
     });
 }
